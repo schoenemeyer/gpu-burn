@@ -5,10 +5,10 @@ http://wili.cc/blog/gpu-burn.html
 # Prerequisite
 docker container NVIDIA runtine in place. If this is missing, please consult our documentation here: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker, it is just a few install commands
 
-# I recommend to use our NGC container, you just have to have the  
+# Use NGC container, you just have to have the  
 docker run --rm --gpus all nvidia/cuda:11.4.1-devel-ubuntu20.04 /bin/bash -c "apt update && apt install -y git && git clone https://github.com/wilicc/gpu-burn && cd gpu-burn && make -j && ./gpu_burn 600"
 
-# Typical output
+## Typical output
 root@6649bccfb3a4:/home/thomass/gpu-burn# ./gpu_burn 10
 GPU 0: NVIDIA RTX A6000 (UUID: GPU-5db0a814-1f18-6948-b810-636d23e7d82f)       
 Initialized device 0 with 48682 MB of memory (47940 MB available, using 43146 MB of it), using FLOATS       
